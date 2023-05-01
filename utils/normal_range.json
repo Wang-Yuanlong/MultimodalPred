@@ -1,0 +1,26 @@
+{
+    "Heart Rate":[
+        40,
+        200
+    ],
+    "Non Invasive Blood Pressure systolic":[
+        90,
+        140
+    ],
+    "Non Invasive Blood Pressure diastolic":[
+        60,
+        90
+    ],
+    "Non Invasive Blood Pressure mean":[
+        60,
+        140
+    ],
+    "Respiratory Rate":[
+        5,
+        100
+    ],
+    "O2 saturation pulseoxymetry":[
+        90,
+        100
+    ]
+}

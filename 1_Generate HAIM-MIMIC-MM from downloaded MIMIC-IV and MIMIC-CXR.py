@@ -197,7 +197,7 @@ df_chartevents['storetime'] = dd.to_datetime(df_chartevents['storetime'])
 
 
 ## CXR
-# df_mimic_cxr_jpg = build_mimic_cxr_jpg_dataframe(core_mimiciv_imgcxr_path + 'files', do_save=True)
+df_mimic_cxr_jpg = build_mimic_cxr_jpg_dataframe(core_mimiciv_imgcxr_path + 'files', do_save=True)
 if (not 'cxrtime' in df_mimic_cxr_metadata.columns) or (not 'Img_Filename' in df_mimic_cxr_metadata.columns):
     # Create CXRTime variable if it does not exist already
     print("Processing CXRtime stamps")
@@ -208,7 +208,7 @@ if (not 'cxrtime' in df_mimic_cxr_metadata.columns) or (not 'Img_Filename' in df
     df_cxr['cxrtime'] = df_cxr.apply(lambda r : dt.datetime.combine(r['StudyDateForm'],r['StudyTimeForm']),1)
 
     # # Add paths and info to images in cxr
-    df_mimic_cxr_jpg = pd.read_csv(core_mimiciv_imgcxr_path + 'files/mimic-cxr-2.0.0-jpeg-txt.csv')
+    # df_mimic_cxr_jpg = pd.read_csv(core_mimiciv_imgcxr_path + 'files/mimic-cxr-2.0.0-jpeg-txt.csv')
     df_cxr = pd.merge(df_mimic_cxr_jpg, df_cxr, on='dicom_id')
     
     # Save

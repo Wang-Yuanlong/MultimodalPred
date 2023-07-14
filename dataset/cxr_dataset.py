@@ -43,7 +43,7 @@ class CXR_dataset(Dataset):
                     "Fracture", 'Lung Lesion', 'Lung Opacity', 'No Finding', 'Pleural Effusion', 
                     'Pleural Other', 'Pneumonia', 'Pneumothorax', 'Support Devices']
         if regenerate:
-            self.cxr = pd.read_csv(os.path.join(data_path, 'cxr_escaped.csv')).drop_duplicates()
+            self.cxr = pd.read_csv(os.path.join(data_path, 'cxr.csv')).drop_duplicates()
             self.cxr['study_id'] = self.cxr['study_id'].astype('int64')
             self.core = pd.read_csv(os.path.join(data_path, 'core.csv'))
             self.core[['subject_id', 'hadm_id']] = self.core[['subject_id', 'hadm_id']].astype('int64')

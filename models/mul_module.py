@@ -6,7 +6,7 @@ from models.note_module import Note_module
 
 class Mul_module(nn.Module):
     def __init__(self, device='cpu', embed_size=512, mode='joint', modality='ecn'):
-        super(Flex_module, self).__init__()
+        super(Mul_module, self).__init__()
         self.device=device
         self.mode = mode
         self.embed_size = embed_size

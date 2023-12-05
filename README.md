@@ -28,6 +28,10 @@ Late fusion employs classifiers on each modality respectively and take the avera
 ## Files directory
 ```
 ./
+├─data      # put downloaded data here
+|   |   mimiciv/*
+|   |   mimic-cxr-jpg/*
+|   └─  mimic-note/*
 ├─corpus    # empty folder for output
 ├─utils     # helper files
 ├─dataset
